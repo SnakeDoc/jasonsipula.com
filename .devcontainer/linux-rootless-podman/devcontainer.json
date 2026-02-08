@@ -22,9 +22,11 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "anthropic.claude-code",
         "bmalehorn.vscode-fish",
         "christian-kohler.path-intellisense",
         "davidanson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint",
         "donjayamanne.githistory",
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
@@ -37,9 +39,12 @@
         "mhutchie.git-graph",
         "ms-azuretools.vscode-docker",
         "ms-vsliveshare.vsliveshare",
+        "openai.chatgpt",
         "redhat.vscode-yaml",
         "redocly.openapi-vs-code",
         "ritwickdey.liveserver",
+        "svelte.svelte-vscode",
+        "vitest.explorer",
         "yzhang.markdown-all-in-one"
       ],
       "settings": {
