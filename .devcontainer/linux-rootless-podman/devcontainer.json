@@ -2,23 +2,10 @@
 {
   "name": "linux-rootless-podman",
   "build": {
-    "dockerfile": "../Dockerfile"
+    "dockerfile": "../Dockerfile",
+    "context": "../.."
   },
-  "remoteUser": "bymbly",
-  "workspaceMount": "",
-  "runArgs": [
-    "--security-opt",
-    "label=disable",
-    "--security-opt",
-    "seccomp=unconfined",
-    "--network=host",
-    "--userns=keep-id",
-    "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
-  ],
-  "mounts": [
-    "source=bymbly-fish-cache-${localWorkspaceFolderBasename},target=/home/bymbly/.local/share/fish,type=volume"
-  ],
-  "postCreateCommand": "asdf install",
+  "runArgs": ["--security-opt", "label=disable", "--userns=keep-id"],
   "customizations": {
     "vscode": {
       "extensions": [
