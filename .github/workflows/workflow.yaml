@@ -13,19 +13,19 @@ concurrency:
 
 jobs:
   prettier-format-check:
-    name: Prettier Format Check
+    name: Check
     uses: bymbly/gha-workflows/.github/workflows/prettier-format-check.yaml@main
 
   eslint-lint-check:
-    name: ESLint Check
+    name: Check
     uses: bymbly/gha-workflows/.github/workflows/eslint-lint-check.yaml@main
 
   markdown-lint-check:
-    name: Markdown Lint Check
+    name: Check
     uses: bymbly/gha-workflows/.github/workflows/markdown-lint-check.yaml@main
 
   stylelint-lint-check:
-    name: Stylelint Check
+    name: Check / Stylelint Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -36,7 +36,7 @@ jobs:
       - run: npx stylelint "**/*.css"
 
   astro-check:
-    name: Astro Check
+    name: Check / Astro Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
