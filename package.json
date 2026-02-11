@@ -4,6 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "clean": "rm -rf dist .astro",
+    "nuke": "rm -rf node_modules dist .astro",
     "check": "astro check",
     "build": "run-s check build:astro",
     "build:astro": "astro build",
