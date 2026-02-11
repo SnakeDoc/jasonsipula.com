@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  prettier-format-check:
+    name: Check
+    uses: bymbly/gha-workflows/.github/workflows/prettier-format-check.yaml@main
+
+  eslint-lint-check:
+    name: Check
+    uses: bymbly/gha-workflows/.github/workflows/eslint-lint-check.yaml@main
+
+  markdown-lint-check:
+    name: Check
+    uses: bymbly/gha-workflows/.github/workflows/markdown-lint-check.yaml@main
+
+  stylelint-lint-check:
+    name: Check / Stylelint Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: bymbly/gha-workflows/.github/actions/setup-node@main
+        with:
+          cache: "npm"
+      - run: npm ci
+      - run: npx stylelint "**/*.css"
+
+  astro-check:
+    name: Check / Astro Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: bymbly/gha-workflows/.github/actions/setup-node@main
+        with:
+          cache: "npm"
+      - run: npm ci
+      - run: npx astro check

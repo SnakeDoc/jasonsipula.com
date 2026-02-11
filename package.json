@@ -4,25 +4,31 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "clean": "rm -rf dist .astro",
+    "nuke": "rm -rf node_modules dist .astro",
+    "check": "astro check",
+    "build": "run-s check build:astro",
+    "build:astro": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "run-s lint:*",
     "lint:script": "eslint --fix .",
-    "lint:css": "npx stylelint \"**/*.css\" --fix",
+    "lint:css": "stylelint \"**/*.css\" --fix",
     "lint:md": "markdownlint-cli2 --fix",
     "lint:check": "run-p lint:check:*",
     "lint:check:script": "eslint .",
-    "lint:check:css": "npx stylelint \"**/*.css\"",
+    "lint:check:css": "stylelint \"**/*.css\"",
     "lint:check:md": "markdownlint-cli2",
-    "validate": "run-s format:check lint:check"
+    "validate": "run-s format:check lint:check check"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@dreamsicle.io/stylelint-config-tailwindcss": "^1.2.2",
