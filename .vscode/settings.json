@@ -2,7 +2,11 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
+
+  // https://github.com/ota-meshi/eslint-plugin-astro#visual-studio-code
   "eslint.validate": ["javascript", "astro", "tylescript"],
+
+  // https://github.com/ota-meshi/stylelint-config-html#visual-studio-code
   "stylelint.validate": ["html", "astro"],
 
   // https://github.com/withastro/prettier-plugin-astro#formatting-with-the-vs-code-prettier-extension-directly
