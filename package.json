@@ -24,30 +24,30 @@
     "validate": "run-s format:check lint:check check"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.17.1",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3"
+    "@astrojs/check": "0.9.6",
+    "@tailwindcss/vite": "4.1.18",
+    "astro": "5.17.1",
+    "tailwindcss": "4.1.18",
+    "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@dreamsicle.io/stylelint-config-tailwindcss": "^1.2.2",
-    "@eslint/json": "^1.0.0",
-    "@typescript-eslint/parser": "^8.55.0",
-    "eslint": "^9.39.2",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-astro": "^1.5.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "markdownlint-cli2": "^0.20.0",
-    "npm-run-all2": "^5.0.0",
-    "postcss-html": "^1.8.1",
-    "prettier": "^3.8.1",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "stylelint": "^17.2.0",
-    "stylelint-config-alphabetical-order": "^2.0.0",
-    "stylelint-config-html": "^1.1.0",
-    "stylelint-config-standard": "^40.0.0",
-    "typescript-eslint": "^8.55.0"
+    "@dreamsicle.io/stylelint-config-tailwindcss": "1.2.2",
+    "@eslint/json": "1.0.0",
+    "@typescript-eslint/parser": "8.55.0",
+    "eslint": "9.39.2",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-astro": "1.5.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "markdownlint-cli2": "0.20.0",
+    "npm-run-all2": "5.0.2",
+    "postcss-html": "1.8.1",
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "stylelint": "17.2.0",
+    "stylelint-config-alphabetical-order": "2.0.0",
+    "stylelint-config-html": "1.1.0",
+    "stylelint-config-standard": "40.0.0",
+    "typescript-eslint": "8.55.0"
   }
 }
