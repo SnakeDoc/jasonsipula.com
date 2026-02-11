@@ -4,5 +4,6 @@ export default {
     "stylelint-config-standard",
     "@dreamsicle.io/stylelint-config-tailwindcss",
     "stylelint-config-html",
+    "stylelint-config-alphabetical-order",
   ],
 };
