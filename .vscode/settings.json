@@ -3,5 +3,11 @@
     "*.css": "tailwindcss"
   },
   "eslint.validate": ["javascript", "astro", "tylescript"],
-  "stylelint.validate": ["html", "astro"]
+  "stylelint.validate": ["html", "astro"],
+
+  // https://github.com/withastro/prettier-plugin-astro#formatting-with-the-vs-code-prettier-extension-directly
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
