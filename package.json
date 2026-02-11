@@ -7,16 +7,17 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "run-s lint:*",
     "lint:script": "eslint --fix .",
     "lint:css": "npx stylelint \"**/*.css\" --fix",
     "lint:md": "markdownlint-cli2 --fix",
-    "lint:check": "run-s lint:check:*",
+    "lint:check": "run-p lint:check:*",
     "lint:check:script": "eslint .",
     "lint:check:css": "npx stylelint \"**/*.css\"",
     "lint:check:md": "markdownlint-cli2",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "validate": "run-s format:check lint:check"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
