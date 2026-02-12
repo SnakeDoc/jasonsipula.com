@@ -3,4 +3,18 @@
 @theme {
   --font-serif: "Instrument Serif", Georgia, serif;
   --font-sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+
+  /* site palette */
+  --color-ink: #0f1923;
+  --color-ink-soft: #1e2d3d;
+  --color-slate: #3d5167;
+  --color-mid: #6b8299;
+  --color-accent: #4a7c9b;
+  --color-accent-hover: #5a93b8;
+  --color-muted: #94a7b8;
+  --color-light: #c8d5df;
+  --color-surface: #f4f6f8;
+  --color-paper: #fff;
+  --color-rule: #dfe6ec;
+  --color-rule-faint: #edf1f5;
 }
