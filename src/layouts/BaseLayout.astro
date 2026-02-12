@@ -1,6 +1,7 @@
 ---
 import Footer from "@components/Footer.astro";
 import NavBar from "@components/NavBar.astro";
+import SkipToContentButton from "@components/SkipToContentButton.astro";
 import "@fontsource/dm-sans";
 import "@fontsource/instrument-serif";
 import "@styles/global.css";
@@ -16,9 +17,12 @@ const { title = "Jason Sipula - Technology Executive & Advisor" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
   </head>
-  <body class="flex min-h-screen flex-col">
+  <body
+    class="bg-paper text-ink flex min-h-screen flex-col font-sans leading-relaxed font-light antialiased"
+  >
+    <SkipToContentButton />
     <NavBar />
-    <main class="flex-1 pt-24">
+    <main id="main" class="flex-1 pt-24">
       <slot />
     </main>
     <Footer />
