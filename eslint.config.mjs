@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import json from "@eslint/json";
 import prettier from "eslint-config-prettier";
 import astro from "eslint-plugin-astro";
+import a11y from "eslint-plugin-jsx-a11y";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import ts from "typescript-eslint";
@@ -42,5 +43,7 @@ export default defineConfig(
       },
     },
   },
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument -- plugin is pure JS
+  a11y.flatConfigs.strict,
   prettier,
 );
