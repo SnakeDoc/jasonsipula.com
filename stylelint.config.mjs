@@ -6,4 +6,5 @@ export default {
     "stylelint-config-html",
     "stylelint-config-alphabetical-order",
   ],
+  ignoreFiles: ["**/node_modules/**", "**/dist/**", "**/.astro/**"],
 };
