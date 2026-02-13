@@ -1,7 +1,7 @@
 ---
 import Footer from "@components/Footer.astro";
-import NavBar from "@components/NavBar.astro";
-import SkipToContentButton from "@components/SkipToContentButton.astro";
+import Nav from "@components/Nav.astro";
+import SkipLink from "@components/SkipLink.astro";
 import "@styles/fonts.css";
 import "@styles/global.css";
 const { title = "Jason Sipula - Technology Executive & Advisor" } = Astro.props;
@@ -19,8 +19,8 @@ const { title = "Jason Sipula - Technology Executive & Advisor" } = Astro.props;
   <body
     class="bg-paper selection:bg-accent text-ink flex min-h-screen flex-col font-sans leading-relaxed font-light antialiased"
   >
-    <SkipToContentButton />
-    <NavBar />
+    <SkipLink />
+    <Nav />
     <main id="main" class="flex-1 pt-24">
       <slot />
     </main>
