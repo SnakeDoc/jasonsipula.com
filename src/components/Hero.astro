@@ -1,6 +1,8 @@
-<section
-  class="animate-fade-up animation-delay-100 mx-auto max-w-3xl px-8 py-16"
->
+---
+const { class: className = "" } = Astro.props;
+---
+
+<section class={`mx-auto max-w-3xl px-8 py-16 ${className}`}>
   <h1
     class="text-ink mb-6 font-serif text-6xl leading-tight font-normal tracking-tight"
   >
