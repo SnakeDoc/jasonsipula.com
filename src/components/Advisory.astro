@@ -1,0 +1,59 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
+<section id="advisory" class={`max-w-3xl mx-auto px-8 py-20 ${className}`}>
+  <div class="text-slate mb-8 text-xs font-medium tracking-widest uppercase">
+    How I Help
+  </div>
+  <h2
+    class="text-ink mb-5 font-serif text-3xl leading-tight font-normal tracking-tight"
+  >
+    Advisory &amp; fractional leadership
+  </h2>
+  <p class="text-slate max-w-xl leading-relaxed">
+    I work with growing companies that need senior technology perspective
+    without a full-time executive hire.
+  </p>
+
+  <div
+    class="bg-rule-faint border-rule-faint mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-md border max-sm:grid-cols-1"
+  >
+    <div class="bg-paper p-8">
+      <h3 class="text-ink mb-2 font-serif text-lg font-normal">
+        Fractional CTO
+      </h3>
+      <p class="text-slate text-sm leading-relaxed">
+        Interim technology leadership for companies navigating growth,
+        transition, or technical complexity.
+      </p>
+    </div>
+    <div class="bg-paper p-8">
+      <h3 class="text-ink mb-2 font-serif text-lg font-normal">
+        Architecture Review
+      </h3>
+      <p class="text-slate text-sm leading-relaxed">
+        Assessment of systems, infrastructure, and platform decisions with
+        actionable recommendations.
+      </p>
+    </div>
+    <div class="bg-paper p-8">
+      <h3 class="text-ink mb-2 font-serif text-lg font-normal">
+        Technology Roadmaps
+      </h3>
+      <p class="text-slate text-sm leading-relaxed">
+        Strategic planning that connects technical investment to business
+        outcomes and timelines.
+      </p>
+    </div>
+    <div class="bg-paper p-8">
+      <h3 class="text-ink mb-2 font-serif text-lg font-normal">
+        Operations &amp; Commerce
+      </h3>
+      <p class="text-slate text-sm leading-relaxed">
+        Ecommerce platforms, logistics systems, and operational technology that
+        scales with your business.
+      </p>
+    </div>
+  </div>
+</section>
