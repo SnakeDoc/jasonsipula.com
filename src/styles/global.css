@@ -53,5 +53,6 @@
 }
 
 @utility animation-delay-* {
+  opacity: 0;
   animation-delay: --value(--animation-delay-*);
 }
