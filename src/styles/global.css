@@ -18,8 +18,10 @@
   --color-rule: #dfe6ec;
   --color-rule-faint: #edf1f5;
 
+  /* animations */
   --animate-fade-up: fade-up 0.7s ease forwards;
 
+  /* animation delays */
   --animation-delay-100: 100ms;
   --animation-delay-150: 150ms;
   --animation-delay-200: 200ms;
@@ -46,6 +48,7 @@
     opacity: 0;
     transform: translateY(18px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -53,17 +56,17 @@
 }
 
 @utility animation-delay-* {
-  opacity: 0;
   animation-delay: --value(--animation-delay-*);
+  opacity: 0;
 }
 
 body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.02;
   background-image: url("/noise.svg");
   background-size: 200px;
+  content: "";
+  inset: 0;
+  opacity: 0.02;
+  pointer-events: none;
+  position: fixed;
   z-index: 9999;
 }
