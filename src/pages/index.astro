@@ -1,17 +1,18 @@
 ---
-import "../styles/global.css";
+import Advisory from "@components/Advisory.astro";
+import Contact from "@components/Contact.astro";
+import Divider from "@components/Divider.astro";
+import Hero from "@components/Hero.astro";
+import Proof from "@components/Proof.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<Layout>
+  <Hero class="animate-fade-up animation-delay-100" />
+  <Divider class="animate-fade-up animation-delay-200" />
+  <Proof class="animate-fade-up animation-delay-300" />
+  <Divider class="animate-fade-up animation-delay-400" />
+  <Advisory class="animate-fade-up animation-delay-500" />
+  <Divider class="animate-fade-up animation-delay-600" />
+  <Contact class="animate-fade-up animation-delay-700" />
+</Layout>

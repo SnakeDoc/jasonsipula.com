@@ -1,1 +1,72 @@
 @import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", georgia, serif;
+  --font-sans: "DM Sans Variable", "Helvetica Neue", arial, sans-serif;
+
+  /* site palette */
+  --color-ink: #0f1923;
+  --color-ink-soft: #1e2d3d;
+  --color-slate: #3d5167;
+  --color-mid: #6b8299;
+  --color-accent: #4a7c9b;
+  --color-accent-hover: #5a93b8;
+  --color-muted: #94a7b8;
+  --color-light: #c8d5df;
+  --color-surface: #f4f6f8;
+  --color-paper: #fff;
+  --color-rule: #dfe6ec;
+  --color-rule-faint: #edf1f5;
+
+  /* animations */
+  --animate-fade-up: fade-up 0.7s ease forwards;
+
+  /* animation delays */
+  --animation-delay-100: 100ms;
+  --animation-delay-150: 150ms;
+  --animation-delay-200: 200ms;
+  --animation-delay-250: 250ms;
+  --animation-delay-300: 300ms;
+  --animation-delay-350: 350ms;
+  --animation-delay-400: 400ms;
+  --animation-delay-450: 450ms;
+  --animation-delay-500: 500ms;
+  --animation-delay-550: 550ms;
+  --animation-delay-600: 600ms;
+  --animation-delay-650: 650ms;
+  --animation-delay-700: 700ms;
+  --animation-delay-750: 750ms;
+  --animation-delay-800: 800ms;
+  --animation-delay-850: 850ms;
+  --animation-delay-900: 900ms;
+  --animation-delay-950: 950ms;
+  --animation-delay-1000: 1000ms;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animation-delay-* {
+  animation-delay: --value(--animation-delay-*);
+  opacity: 0;
+}
+
+body::after {
+  background-image: url("/noise.svg");
+  background-size: 200px;
+  content: "";
+  inset: 0;
+  opacity: 0.02;
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+}

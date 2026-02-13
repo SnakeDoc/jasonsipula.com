@@ -1,0 +1,37 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
+<section id="contact" class={`max-w-3xl mx-auto px-8 pt-20 pb-24 ${className}`}>
+  <div class="text-slate mb-8 text-xs font-medium tracking-widest uppercase">
+    Contact
+  </div>
+  <h2
+    class="text-ink mb-5 font-serif text-3xl leading-tight font-normal tracking-tight"
+  >
+    Let's have a conversation
+  </h2>
+  <p class="text-slate max-w-xl leading-relaxed">
+    I'm always open to discussing technology leadership challenges, advisory
+    engagements, or the right full-time opportunity.
+  </p>
+  <div class="mt-8">
+    <a
+      class="text-accent hover:border-accent border-b border-transparent font-serif text-2xl no-underline transition-all duration-300"
+      href="mailto:jason@jasonsipula.com">jason@jasonsipula.com</a
+    >
+  </div>
+  <div class="mt-6 flex gap-8 max-sm:flex-col max-sm:gap-3">
+    <a
+      class="text-slate hover:text-accent text-sm no-underline transition-colors duration-300"
+      href="https://linkedin.com/in/jason-sipula"
+      target="_blank">LinkedIn</a
+    >
+    <a
+      class="text-slate hover:text-accent text-sm no-underline transition-colors duration-300"
+      href="https://github.com/SnakeDoc"
+      target="_blank">GitHub</a
+    >
+    <span class="text-slate text-sm">Sacramento, CA</span>
+  </div>
+</section>

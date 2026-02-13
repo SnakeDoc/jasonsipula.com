@@ -6,6 +6,9 @@
     "context": "../.."
   },
   "runArgs": ["--security-opt", "label=disable", "--userns=keep-id"],
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-fish-cache,target=/home/bymbly/.local/share/fish,type=volume"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [

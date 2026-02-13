@@ -1,0 +1,44 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
+<section class={`max-w-3xl mx-auto px-7 py-14 ${className}`}>
+  <div class="grid grid-cols-3 gap-8 max-sm:grid-cols-1 max-sm:gap-2">
+    <div
+      class="py-4 max-sm:flex max-sm:items-baseline max-sm:gap-4 max-sm:py-3"
+    >
+      <div
+        class="text-ink mb-1 font-serif text-3xl leading-tight max-sm:mb-0 max-sm:text-2xl"
+      >
+        Nearly 20 years
+      </div>
+      <div class="text-slate text-xs leading-normal tracking-wide">
+        Progressive technology leadership through CTO
+      </div>
+    </div>
+    <div
+      class="py-4 max-sm:flex max-sm:items-baseline max-sm:gap-4 max-sm:py-3"
+    >
+      <div
+        class="text-ink mb-1 font-serif text-3xl leading-tight max-sm:mb-0 max-sm:text-2xl"
+      >
+        Full-stack
+      </div>
+      <div class="text-slate text-xs leading-normal tracking-wide">
+        Cloud • ecommerce • ERP • infrastructure • teams
+      </div>
+    </div>
+    <div
+      class="py-4 max-sm:flex max-sm:items-baseline max-sm:gap-4 max-sm:py-3"
+    >
+      <div
+        class="text-ink mb-1 font-serif text-3xl leading-tight max-sm:mb-0 max-sm:text-2xl"
+      >
+        Builder
+      </div>
+      <div class="text-slate text-xs leading-normal tracking-wide">
+        Startup co-founder, open-source contributor
+      </div>
+    </div>
+  </div>
+</section>
