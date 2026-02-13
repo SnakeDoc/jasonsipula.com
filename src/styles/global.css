@@ -56,3 +56,14 @@
   opacity: 0;
   animation-delay: --value(--animation-delay-*);
 }
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.02;
+  background-image: url("/noise.svg");
+  background-size: 200px;
+  z-index: 9999;
+}
