@@ -1,0 +1,48 @@
+---
+import WorkItem from "./WorkItem.astro";
+
+const { class: className = "" } = Astro.props;
+---
+
+<section id="work" class={`max-w-3xl mx-auto px-8 py-20 ${className}`}>
+  <div class="text-slate mb-8 text-xs font-medium tracking-widest uppercase">
+    Selected Work
+  </div>
+  <h2
+    class="text-ink mb-5 font-serif text-3xl leading-tight font-normal tracking-tight"
+  >
+    Things I've built and led
+  </h2>
+  <p class="text-slate max-w-xl leading-relaxed">
+    A mix of organizational transformation, deep technical systems, and hands-on
+    engineering.
+  </p>
+
+  <div class="mt-10 flex flex-col">
+    <WorkItem
+      title="Cross-Functional Technology Leadership"
+      description="Grew from systems administrator to CTO, building and leading teams across engineering, operations, ecommerce, and customer service. Managed vendor relationships, contract negotiations, technology strategy, and organizational growth."
+      focus="Leadership"
+    />
+    <WorkItem
+      title="Production Systems & Internal Tooling"
+      description="Designed and built production systems in Java and Kotlin including order management workflows, automated data pipelines, and operational tooling that supported warehouse and ecommerce functions."
+      focus="Engineering"
+    />
+    <WorkItem
+      title="Enterprise Transformation & Applied AI"
+      description="Led a multi-year enterprise transformation including AS400-to-modern-ERP migration and built a multi-channel ecommerce operation from the ground up. Deployed applied AI to operational and customer-facing systems."
+      focus="Leadership"
+    />
+    <WorkItem
+      title="Gleam Language Ecosystem Contributions"
+      description="Contributed the Gleam language manager to Renovate, a widely-used dependency automation tool, working across TypeScript, Rust, and Gleam. Made upstream contributions to the Gleam compiler to enable selective dependency updates, completing the full integration across multiple projects."
+      focus="Open Source"
+    />
+    <WorkItem
+      title="PCB Design & Embedded Firmware"
+      description="Designed custom circuit boards from schematic through PCB layout and manufacturing. Wrote embedded C++ firmware including a hardware display driver developed from component datasheets."
+      focus="Engineering"
+    />
+  </div>
+</section>
