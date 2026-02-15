@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "clean": "rm -rf dist .astro",
     "nuke": "rm -rf node_modules dist .astro",
-    "check": "astro check",
+    "check": "astro check --minimumFailingSeverity warning",
     "build": "run-s check build:astro",
     "build:astro": "astro build",
     "preview": "astro preview",
