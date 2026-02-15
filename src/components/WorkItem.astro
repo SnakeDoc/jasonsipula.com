@@ -1,0 +1,21 @@
+---
+const { title, description, focus } = Astro.props;
+---
+
+<div
+  class="group border-rule-faint first:border-rule-faint grid grid-flow-col items-baseline gap-4 border-b py-5 text-inherit no-underline transition-all duration-300 first:border-t hover:pl-2 max-sm:grid-cols-1 max-sm:gap-1"
+>
+  <div>
+    <div
+      class="text-ink group-hover:text-accent font-serif text-xl leading-snug transition-colors duration-300"
+    >
+      {title}
+    </div>
+    <div class="text-slate leading-related mt-1 text-sm">
+      {description}
+    </div>
+  </div>
+  <span class="text-slate text-xs tracking-wide whitespace-nowrap uppercase"
+    >{focus}</span
+  >
+</div>

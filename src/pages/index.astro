@@ -4,15 +4,47 @@ import Contact from "@components/Contact.astro";
 import Divider from "@components/Divider.astro";
 import Hero from "@components/Hero.astro";
 import Proof from "@components/Proof.astro";
+import Work from "@components/Work.astro";
 import Layout from "@layouts/Layout.astro";
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jason Sipula",
+  url: Astro.site,
+  jobTitle: "Technology Executive & Advisor",
+  alumniOf: "California State University, Sacramento",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Sacramento",
+    addressRegion: "CA",
+    addressCountry: "USA",
+  },
+  sameAs: [
+    "https://linkedin.com/in/jason-sipula",
+    "https://github.com/SnakeDoc",
+  ],
+  knowsAbout: [
+    "Technology Leadership",
+    "Enterprise Architecture",
+    "Ecommerce Operations",
+    "Cloud Infrastructure",
+  ],
+});
 ---
 
-<Layout>
+<Layout
+  description="Jason Sipula is a technology executive and advisor with nearly two decades of experience in engineering leadership, enterprise transformation, and ecommerce operations."
+>
   <Hero class="animate-fade-up animation-delay-100" />
   <Divider class="animate-fade-up animation-delay-200" />
   <Proof class="animate-fade-up animation-delay-300" />
   <Divider class="animate-fade-up animation-delay-400" />
-  <Advisory class="animate-fade-up animation-delay-500" />
-  <Divider class="animate-fade-up animation-delay-600" />
+  <Work class="animate-fade-up animation-delay-500" />
+  <Divider class="animate-fade-up animation-delay-550" />
+  <Advisory class="animate-fade-up animation-delay-600" />
+  <Divider class="animate-fade-up animation-delay-650" />
   <Contact class="animate-fade-up animation-delay-700" />
 </Layout>
+
+<script is:inline type="application/ld+json" set:html={schema} />
