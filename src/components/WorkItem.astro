@@ -1,9 +1,8 @@
 ---
-const { href = "#", title, description, focus } = Astro.props;
+const { title, description, focus } = Astro.props;
 ---
 
-<a
-  href={href}
+<div
   class="group border-rule-faint first:border-rule-faint grid grid-flow-col items-baseline gap-4 border-b py-5 text-inherit no-underline transition-all duration-300 first:border-t hover:pl-2 max-sm:grid-cols-1 max-sm:gap-1"
 >
   <div>
@@ -19,4 +18,4 @@ const { href = "#", title, description, focus } = Astro.props;
   <span class="text-slate text-xs tracking-wide whitespace-nowrap uppercase"
     >{focus}</span
   >
-</a>
+</div>
