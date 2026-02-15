@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  font-size: clamp(16px, 1.05vw, 18px);
+}
+
 @theme {
   --font-serif: "Instrument Serif", georgia, serif;
   --font-sans: "DM Sans Variable", "Helvetica Neue", arial, sans-serif;
