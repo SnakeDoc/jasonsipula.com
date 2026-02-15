@@ -1,0 +1,16 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: prettier
+      run: npx prettier --check {staged_files}
+
+    - name: eslint
+      run: npx eslint --no-warn-ignored {staged_files}
+
+    - name: stylelint
+      run: npx stylelint {staged_files}
+      glob: "*.css"
+
+    - name: markdownlint
+      run: npx markdownlint-cli2 {staged_files} && echo "Staged Files - {staged_files}"
+      glob: "*.md"
