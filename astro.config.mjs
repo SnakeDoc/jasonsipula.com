@@ -8,4 +8,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: "https://jasonsipula.com",
+  trailingSlash: "never",
 });
