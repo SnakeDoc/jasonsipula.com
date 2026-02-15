@@ -25,12 +25,16 @@ const { class: className = "" } = Astro.props;
     <a
       class="text-slate hover:text-accent text-sm no-underline transition-colors duration-300"
       href="https://linkedin.com/in/jason-sipula"
-      target="_blank">LinkedIn</a
+      target="_blank"
+      rel="noopener noreferrer"
+      >LinkedIn<span class="sr-only"> (opens in new tab)</span></a
     >
     <a
       class="text-slate hover:text-accent text-sm no-underline transition-colors duration-300"
       href="https://github.com/SnakeDoc"
-      target="_blank">GitHub</a
+      target="_blank"
+      rel="noopener noreferrer"
+      >GitHub<span class="sr-only"> (opens in new tab)</span></a
     >
     <span class="text-slate text-sm">Sacramento, CA</span>
   </div>
