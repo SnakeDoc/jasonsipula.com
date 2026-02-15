@@ -21,7 +21,10 @@
     "lint:check:script": "eslint .",
     "lint:check:css": "stylelint \"**/*.css\"",
     "lint:check:md": "markdownlint-cli2",
-    "validate": "run-s format:check lint:check check"
+    "validate": "run-s format:check lint:check check",
+    "deploy": "run-s clean validate build deploy:wrangler",
+    "deploy:wrangler": "wrangler deploy",
+    "deploy:wrangler:preview": "wrangler preview"
   },
   "dependencies": {
     "@astrojs/check": "0.9.6",
@@ -51,6 +54,7 @@
     "stylelint-config-alphabetical-order": "2.0.0",
     "stylelint-config-html": "1.1.0",
     "stylelint-config-standard": "40.0.0",
-    "typescript-eslint": "8.55.0"
+    "typescript-eslint": "8.55.0",
+    "wrangler": "^4.65.0"
   }
 }
