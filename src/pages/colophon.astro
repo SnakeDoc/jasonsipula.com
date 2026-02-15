@@ -1,0 +1,192 @@
+---
+import Divider from "@components/Divider.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout
+  title="How this site is built - Jason Sipula"
+  description="How jasonsipula.com is built: the stack, infrastructure, development practices, and design decisions behind the site."
+>
+  <section
+    class="animate-fade-up animation-delay-100 mx-auto max-w-3xl px-8 pt-16 pb-12"
+  >
+    <h1
+      class="text-ink mb-5 font-serif text-3xl leading-tight font-normal tracking-tight"
+    >
+      How this site is built
+    </h1>
+    <p class="text-slate max-w-xl leading-relaxed">
+      This site reflects how I think about technology decisions: choose the
+      right tool, keep things simple, and build with care from the start.
+    </p>
+  </section>
+
+  <Divider class="animate-fade-up animation-delay-150" />
+
+  <section
+    class="animate-fade-up animation-delay-200 mx-auto max-w-3xl px-8 py-16"
+  >
+    <h2 class="text-ink mb-6 font-serif text-xl font-normal">Stack</h2>
+    <div class="text-slate space-y-4 leading-relaxed">
+      <p>
+        The site is built with <strong class="text-ink font-normal"
+          >Astro</strong
+        >, a static-first web framework. I initially reached for SvelteKit,
+        which I've used and enjoyed in the past, but realized it was more
+        framework than this site needed. SvelteKit is designed for web
+        applications. Astro is designed for websites. For a site that's entirely
+        static content with no client-side interactivity, Astro's
+        zero-JavaScript-by-default philosophy is the right architectural choice.
+      </p>
+      <p>
+        Styling is handled by <strong class="text-ink font-normal"
+          >Tailwind CSS</strong
+        >. I've spent enough years building utility classes by hand on various
+        projects to appreciate having a standardized system. Tailwind's
+        explicitness is its strength: you can read the markup and understand the
+        layout without hunting through stylesheets. The typography is set in
+        <strong class="text-ink font-normal">Instrument Serif</strong> and
+        <strong class="text-ink font-normal">DM Sans</strong>, self-hosted via
+        Fontsource.
+      </p>
+    </div>
+  </section>
+
+  <Divider class="animate-fade-up animation-delay-250" />
+
+  <section
+    class="animate-fade-up animation-delay-300 mx-auto max-w-3xl px-8 py-16"
+  >
+    <h2 class="text-ink mb-6 font-serif text-xl font-normal">Infrastructure</h2>
+    <div class="text-slate space-y-4 leading-relaxed">
+      <p>
+        The site is deployed to <strong class="text-ink font-normal"
+          >Cloudflare Workers</strong
+        >
+        with DNS and CDN handled by Cloudflare as well. I've been a Cloudflare user
+        for over a decade. I've used Cloudflare professionally for over a decade,
+        but Workers was a new area for me. Even for a site that will never need to
+        operate at scale, the learning opportunity was worth it.
+      </p>
+      <p>
+        TLS is automatic via Cloudflare. I was an early advocate for full-site
+        HTTPS back when certificates were expensive and EV certs cost a small
+        fortune. Today, encryption is the default. That's progress.
+      </p>
+      <p>
+        Analytics are provided by <strong class="text-ink font-normal"
+          >Cloudflare Web Analytics</strong
+        >, which is cookie-free and collects no personally identifiable
+        information. This site is designed to be compliant with GDPR, CCPA/CPRA,
+        and WCAG from the ground up, not bolted on after the fact. Compliance is
+        a design decision, not a remediation project.
+      </p>
+    </div>
+  </section>
+
+  <Divider class="animate-fade-up animation-delay-350" />
+
+  <section
+    class="animate-fade-up animation-delay-400 mx-auto max-w-3xl px-8 py-16"
+  >
+    <h2 class="text-ink mb-6 font-serif text-xl font-normal">
+      Development practices
+    </h2>
+    <div class="text-slate space-y-4 leading-relaxed">
+      <p>
+        The project includes a <strong class="text-ink font-normal"
+          >devcontainer</strong
+        >
+        configuration, making the development environment completely reproducible.
+        The container is based on Ubuntu with toolchains managed by asdf, runs the
+        Fish shell with Starship prompt, and has everything needed to work on the
+        project from a cold start. No "works on my machine" surprises. Just Docker
+        and an IDE.
+      </p>
+      <p>
+        I've moved to devcontainers for every project I maintain. Each one is
+        sandboxed with its own runtime versions and tooling, ephemeral by
+        design, and rebuildable to a known state in seconds. After years of
+        manually managing SDK installations and inevitably breaking something
+        during an experiment, the predictability is worth every bit of the
+        initial setup.
+      </p>
+      <p>
+        Code quality is enforced through <strong class="text-ink font-normal"
+          >Prettier</strong
+        >,
+        <strong class="text-ink font-normal">ESLint</strong>,
+        <strong class="text-ink font-normal">Stylelint</strong>, and
+        <strong class="text-ink font-normal">markdownlint</strong>, with
+        Lefthook running checks before each commit. The CI pipeline on
+        <strong class="text-ink font-normal">GitHub Actions</strong> runs the full
+        suite (formatting, linting, accessibility checks, and builds) using reusable
+        workflows to keep things consistent across my projects. Deployment to Cloudflare
+        Workers is CI-gated: nothing ships unless every check passes.
+      </p>
+      <p>
+        <strong class="text-ink font-normal">Renovate</strong> manages dependency
+        updates automatically, opening pull requests that run through the full pipeline
+        before auto-merging. Major version bumps require manual review, but everything
+        else stays current without my intervention. Renovate even manages Dockerfile
+        base images and runtime versions. I contributed the Gleam language support
+        to Renovate myself, so it's a project I care about.
+      </p>
+    </div>
+  </section>
+
+  <Divider class="animate-fade-up animation-delay-450" />
+
+  <section
+    class="animate-fade-up animation-delay-500 mx-auto max-w-3xl px-8 py-16"
+  >
+    <h2 class="text-ink mb-6 font-serif text-xl font-normal">Accessibility</h2>
+    <div class="text-slate space-y-4 leading-relaxed">
+      <p>
+        The site targets <strong class="text-ink font-normal"
+          >WCAG 2.2 AA</strong
+        > compliance. This includes semantic HTML structure, proper heading hierarchy,
+        keyboard navigation with a skip-to-content link, sufficient color contrast
+        ratios, and screen reader considerations throughout. Accessibility is tested
+        continuously using automated tooling integrated into the development workflow.
+      </p>
+      <p>
+        Building accessibility in from the start costs almost nothing compared
+        to retrofitting it later. And it's the right thing to do.
+      </p>
+    </div>
+  </section>
+
+  <Divider class="animate-fade-up animation-delay-550" />
+
+  <section
+    class="animate-fade-up animation-delay-600 mx-auto max-w-3xl px-8 pt-16 pb-24"
+  >
+    <h2 class="text-ink mb-6 font-serif text-xl font-normal">Open source</h2>
+    <div class="text-slate space-y-4 leading-relaxed">
+      <p>
+        The source code for this site is
+        <a
+          href="https://github.com/SnakeDoc/jasonsipula.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent hover:border-accent border-b border-transparent no-underline transition-all duration-300"
+        >
+          publicly available on GitHub<span class="sr-only">
+            (opens in new tab)</span
+          ></a
+        >
+        under the Apache 2.0 license. It's not a library or a tool anyone would use
+        directly, but making the source available is in the spirit of open source.
+        Others are free to read, learn from, and borrow from it.
+      </p>
+      <p>
+        Developing in public also holds me to a higher standard. When the source
+        is visible, shortcuts become harder to justify and every decision gets a
+        little more thought. I've yet to meet an engineer who isn't at least
+        slightly embarrassed by their own code. But that self-awareness is part
+        of what drives us to keep improving.
+      </p>
+    </div>
+  </section>
+</Layout>
