@@ -97,18 +97,18 @@ import Layout from "@layouts/Layout.astro";
           >devcontainer</strong
         >
         configuration, making the development environment completely reproducible.
-        The container is based on Ubuntu with toolchains managed by asdf, runs the
-        Fish shell with Starship prompt, and has everything needed to work on the
-        project from a cold start. No "works on my machine" surprises. Just Docker
+        The container is based on Ubuntu with toolchains managed by asdf, and includes
+        the Fish shell with Starship prompt. Everything needed to work on the project
+        is there from a cold start. No "works on my machine" surprises. Just Docker
         and an IDE.
       </p>
       <p>
         I've moved to devcontainers for every project I maintain. Each one is
         sandboxed with its own runtime versions and tooling, ephemeral by
         design, and rebuildable to a known state in seconds. After years of
-        manually managing SDK installations and inevitably breaking something
-        during an experiment, the predictability is worth every bit of the
-        initial setup.
+        manually managing SDK and toolchain installations and dealing with the
+        inevitable drift and breakage that comes with it, the predictability is
+        worth every bit of the initial setup.
       </p>
       <p>
         Code quality is enforced through <strong class="text-ink font-normal"
