@@ -98,9 +98,5 @@ RUN fish ~/.local/bin/install-asdf-tools && \
     rm -rf ~/.asdf/downloads && \
     rm -rf ~/.cache
 
-# pre-install playwright because it's huge and takes forever to install on first run
-RUN PATH="/home/${USER}/.asdf/bin:/home/${USER}/.asdf/shims:$PATH" && \
-    npx playwright install --with-deps
-
 # start fish shell
 ENTRYPOINT ["/usr/bin/fish"]
