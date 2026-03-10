@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography"; /* stylelint-disable-line at-rule-no-unknown -- javascript-based plugin syntax */
+
 html {
   font-size: clamp(16px, 1.05vw, 18px);
 }

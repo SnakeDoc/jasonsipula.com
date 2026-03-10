@@ -1,0 +1,63 @@
+---
+import Divider from "@components/Divider.astro";
+import Layout from "@layouts/Layout.astro";
+import { formatDate } from "@utils/date";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("writing", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<Layout
+  title="Writing - Jason Sipula"
+  description="Thoughts on technology, leadership and building things."
+>
+  <section
+    class="animate-fade-up animation-delay-100 mx-auto max-w-3xl px-8 pt-16 pb-12"
+  >
+    <div class="text-slate mb-8 text-xs font-medium tracking-widest uppercase">
+      Writing
+    </div>
+    <h1
+      class="text-ink mb-5 font-serif text-3xl leading-tight font-normal tracking-tight"
+    >
+      Thoughts on technology, leadership and building things
+    </h1>
+  </section>
+
+  <Divider class="animate-fade-up animation-delay-150" />
+
+  <section
+    class="animate-fade-up animation-delay-200 mx-auto max-w-3xl px-8 py-16"
+  >
+    <div class="flex flex-col">
+      {
+        posts.map((post, i) => {
+          const formattedDate = formatDate(new Date(post.data.date));
+
+          const delay = 300 + i * 50;
+
+          return (
+            <a
+              href={`/writing/${post.id}`}
+              class={`animate-fade-up animation-delay-${delay} group border-rule-faint first:border-rule-faint grid grid-flow-col items-baseline gap-4 border-b py-5 text-inherit no-underline transition-all duration-300 first:border-t hover:pl-2 max-sm:grid-cols-1 max-sm:gap-1`}
+            >
+              <div>
+                <div class="text-ink group-hover:text-accent font-serif text-xl leading-snug transition-colors duration-300">
+                  {post.data.title}
+                </div>
+                <div class="text-slate mt-1 text-sm leading-relaxed">
+                  {post.data.description}
+                </div>
+                <span class="text-slate text-xs tracking-wide whitespace-nowrap">
+                  {formattedDate}
+                </span>
+              </div>
+            </a>
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>
