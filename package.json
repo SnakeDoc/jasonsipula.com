@@ -27,11 +27,11 @@
     "deploy:wrangler:preview": "wrangler preview"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.6",
+    "@astrojs/check": "0.9.7",
     "@fontsource-variable/dm-sans": "5.2.8",
     "@fontsource/instrument-serif": "5.2.8",
     "@tailwindcss/vite": "4.2.1",
-    "astro": "5.18.0",
+    "astro": "5.18.1",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
   },
