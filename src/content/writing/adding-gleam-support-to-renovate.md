@@ -27,11 +27,11 @@ this.
 
 After working with Gleam for a short while, it became obvious dependency management was something that should be
 automated sooner rather than later. Some libraries and frameworks were releasing several times a month, and others even
-more often. This meant keeping up to date was quickly eating into time I could have spent implementing new features and
-other more productive tasks. Delaying updates meant potentially missing deprecations and winding up with surprise
-breaking changes, creating unplanned work and more hassle. I needed an automated solution - but none existed. Neither
-Renovate nor Dependabot supported Gleam, and neither did any other automated tooling. The only way to update Gleam
-dependencies was to manually run a Gleam CLI command.
+more often. This meant keeping up to date was quickly eating into time I could have spent on new features and more
+productive work. Delaying updates meant potentially missing deprecations and winding up with surprise breaking changes,
+creating unplanned work and more hassle. I needed an automated solution - but none existed. Neither Renovate nor
+Dependabot supported Gleam, and neither did any other automated tooling. The only way to update Gleam dependencies was
+to manually run a Gleam CLI command.
 
 Frustrated by the lack of options, I decided to look into adding Gleam support to Renovate. “How hard could it be?”, I
 remember thinking. And so the saga began…
