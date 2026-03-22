@@ -8,5 +8,12 @@ export default {
         parser: "astro",
       },
     },
+    {
+      files: "src/content/**/*.md",
+      options: {
+        printWidth: 120,
+        proseWrap: "always",
+      },
+    },
   ],
 };
