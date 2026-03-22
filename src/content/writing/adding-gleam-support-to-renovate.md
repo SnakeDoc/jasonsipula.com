@@ -1,6 +1,8 @@
 ---
 title: "Adding Gleam Support to Renovate"
-description: "How contributing one feature led to learning Rust, contributing to Gleam, and working across two major open source projects."
+description:
+  "How contributing one feature led to learning Rust, contributing to Gleam, and working across two major open source
+  projects."
 tags: ["gleam", "renovate", "rust", "typescript", "open source"]
 date: 2026-03-11
 draft: false
