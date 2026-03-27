@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@dreamsicle.io/stylelint-config-tailwindcss": "1.2.2",
-    "@eslint/json": "1.1.0",
+    "@eslint/json": "1.2.0",
     "@typescript-eslint/parser": "8.57.1",
     "eslint": "9.39.4",
     "eslint-config-prettier": "10.1.8",
