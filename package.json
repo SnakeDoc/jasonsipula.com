@@ -27,7 +27,7 @@
     "deploy:wrangler:preview": "wrangler preview"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.7",
+    "@astrojs/check": "0.9.8",
     "@fontsource-variable/dm-sans": "5.2.8",
     "@fontsource/instrument-serif": "5.2.8",
     "@tailwindcss/vite": "4.2.2",
