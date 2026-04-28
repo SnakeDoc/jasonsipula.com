@@ -30,9 +30,9 @@
     "@astrojs/check": "0.9.8",
     "@fontsource-variable/dm-sans": "5.2.8",
     "@fontsource/instrument-serif": "5.2.8",
-    "@tailwindcss/vite": "4.2.2",
+    "@tailwindcss/vite": "4.2.3",
     "astro": "5.18.1",
-    "tailwindcss": "4.2.2",
+    "tailwindcss": "4.2.3",
     "typescript": "5.9.3"
   },
   "devDependencies": {
