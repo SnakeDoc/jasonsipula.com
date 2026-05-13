@@ -14,22 +14,22 @@ concurrency:
 jobs:
   prettier-format-check:
     name: Check
-    uses: bymbly/gha-workflows/.github/workflows/prettier-format-check.yaml@49618d2a8e5d01a47515beb13f2a2644a5565eb4 # main
+    uses: bymbly/gha-workflows/.github/workflows/prettier-format-check.yaml@48df6c27ddea762e1913b097b3270293ea2f94bf # main
 
   eslint-lint-check:
     name: Check
-    uses: bymbly/gha-workflows/.github/workflows/eslint-lint-check.yaml@49618d2a8e5d01a47515beb13f2a2644a5565eb4 # main
+    uses: bymbly/gha-workflows/.github/workflows/eslint-lint-check.yaml@48df6c27ddea762e1913b097b3270293ea2f94bf # main
 
   markdown-lint-check:
     name: Check
-    uses: bymbly/gha-workflows/.github/workflows/markdown-lint-check.yaml@49618d2a8e5d01a47515beb13f2a2644a5565eb4 # main
+    uses: bymbly/gha-workflows/.github/workflows/markdown-lint-check.yaml@48df6c27ddea762e1913b097b3270293ea2f94bf # main
 
   stylelint-lint-check:
     name: Check / Stylelint Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-      - uses: bymbly/gha-workflows/.github/actions/setup-node@49618d2a8e5d01a47515beb13f2a2644a5565eb4 # main
+      - uses: bymbly/gha-workflows/.github/actions/setup-node@48df6c27ddea762e1913b097b3270293ea2f94bf # main
         with:
           cache: "npm"
       - run: npm ci
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-      - uses: bymbly/gha-workflows/.github/actions/setup-node@49618d2a8e5d01a47515beb13f2a2644a5565eb4 # main
+      - uses: bymbly/gha-workflows/.github/actions/setup-node@48df6c27ddea762e1913b097b3270293ea2f94bf # main
         with:
           cache: "npm"
       - run: npm ci
@@ -60,7 +60,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-      - uses: bymbly/gha-workflows/.github/actions/setup-node@49618d2a8e5d01a47515beb13f2a2644a5565eb4 # main
+      - uses: bymbly/gha-workflows/.github/actions/setup-node@48df6c27ddea762e1913b097b3270293ea2f94bf # main
         with:
           cache: "npm"
       - run: npm ci
