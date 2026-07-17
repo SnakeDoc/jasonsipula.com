@@ -47,7 +47,7 @@
     "markdownlint-cli2": "0.22.0",
     "npm-run-all2": "8.0.4",
     "postcss-html": "1.8.1",
-    "prettier": "3.8.3",
+    "prettier": "3.9.5",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "0.7.2",
     "stylelint": "17.12.0",
