@@ -31,7 +31,7 @@
     "@fontsource-variable/dm-sans": "5.2.8",
     "@fontsource/instrument-serif": "5.2.8",
     "@tailwindcss/vite": "4.3.2",
-    "astro": "5.18.1",
+    "astro": "7.2.9",
     "tailwindcss": "4.3.2",
     "typescript": "5.9.3"
   },
